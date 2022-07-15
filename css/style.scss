@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+$colorWhite: #ffffff;
+$colorBlue: #013A4C;
+$colorLightBlue: #346170;
+$colorExtraLightBlue: #D3E8F4;
+$colorYellow: #FFD063;
+$colorLightPink: #F2DCE4;
+$smallPad: 11rem 17rem;
+$mediumPad: 15rem 21rem;
+/*$widthBase: 1440;
+$fontSizeBase: 14;
+
+@function allSize($rem, $widthBase, $fontSizeBase){
+  $props: ($fontSizeBase / $widthBase * 100) / $rem;
+  @return $props;
+}
+
+@function sizeFont ($el) {
+  $value: $el / 100vw * 100;
+  @return $value;
+}
+
+@function sizeEl ($el){
+  $value: 100vw * sizeFont($el) / 100;
+  @return $value;
+}*/
+
+@function size ($el) {
+  @if $el == 'small' {
+    $el: $smallPad;
+  } @else {
+    $el: $mediumPad;
+  }
+  @return $el;
+}
+
+@mixin borderButton ($props){
+  border: 1rem solid $props;
+  border-radius: 4rem;
+}
+
+@mixin containerButton ( $el, $bgCol1, $sizeEl1, $fontSizeEl1, $fontCol1, $bgCol2, $sizeEl2, $fontSizeEl2, $fontCol2, $brcol1, $brcol2, $br) {
+  @if $el == 2{
+    .container-button-items{
+      display: flex;
+    }
+    li:first-child{
+      background: $bgCol1;
+      font-size: $fontSizeEl1;
+      color: $fontCol1;
+      @if $br == true {
+      @include borderButton($brcol1);
+      }
+      a{
+        padding: size($sizeEl1);
+      }
+    }
+    li:nth-child(2){
+      margin-left: 16rem;
+      background: $bgCol2;
+      font-size: $fontSizeEl2;
+      color: $fontCol2;
+      @if $br == true {
+        @include borderButton($brcol2);
+      }
+      a{
+        padding: size($sizeEl2);
+      }
+    }
+  } @else {
+    li:first-child{
+      background: $bgCol1;
+      font-size: $fontSizeEl1;
+      color: $fontCol1;
+      @if $br == true {
+        @include borderButton($brcol1);
+      }
+      a{
+        padding: size($sizeEl1);
+      }
+    }
+  }
+  a{
+    display: flex;
+  }
+  li:hover{
+    -webkit-box-shadow: 0rem 5rem 10rem 2rem rgba(255, 255, 255, 0.2) inset;
+    -moz-box-shadow: 0rem 5rem 10rem 2rem rgba(255, 255, 255, 0.2) inset;
+    box-shadow: 0rem 5rem 10rem 2rem rgba(255, 255, 255, 0.2) inset;
+  }
+}
+
+html{
+  font-size: 0.0700384vw;
+  /*font-size: calc(100vw - (99% - ((100vw / 100) * 99)));*/
+  /*font-size: calc(baseKef(14) * 0vw);*/
+  /*font-size: calc(100vw * sizeEl(14) / 100);*/
+  /*font-size: allSize(16, $widthBase, $fontSizeBase)+vw;*/
+  font-family: 'Work Sans', sans-serif;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  max-width: 100%;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+ul, li, ol {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  border: none;
+  position: unset;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.2;
+}
+h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
+  content: none;
+}
+h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
+  content: none;
+}
+
+.container{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-button{
+  @include containerButton(2, $colorYellow, mediun, 16rem, $colorBlue, $colorBlue, medium, 14rem, $colorWhite, $colorYellow, $colorBlue, $br: true);
+}
+
+.container-button-preview{
+  @include  containerButton(1, $colorYellow, medium, 16rem, $colorBlue, false, false, false, false, $colorYellow, false, $br: true)
+}
+
+.container-button-collaborate{
+  @include containerButton(1, transparent, small, 14rem, $colorBlue, false, false, false, false, $colorBlue, false, $br: true)
+}
+
+.container-header{
+  height: 80rem;
+  background: #fff;
+  padding:4rem 48rem 0 48rem;
+  border-bottom: 1rem solid gainsboro;
+
+  header{
+    max-width: 100%;
+    height: 100%;
+    font-size: 16rem;
+    line-height: 1.33;
+    color: #013A4C;
+    padding-right: 19.48rem;
+    display: flex;
+    align-items: center;
+
+    img{
+      width: 140rem;
+      height: 31rem;
+    }
+    nav{
+      ul{
+        display: flex;
+        color: #013A4C;
+      }
+    }
+  }
+}
+
+.container-menu{
+  margin-left: 429rem;
+  li:nth-child(2){
+    margin: 0 62rem;
+  }
+  li:nth-child(4){
+    margin: 0 32rem;
+  }
+}
+.container-login{
+  margin-left: 48rem;
+  font-size: 14rem;
+}
+
+.link{
+  padding: 11rem 17rem;
+}
+
+.link-demo{
+  background: #FFD063;
+  border: 1rem solid #FFD063;
+  border-radius: 4rem;
+  margin-right: 8rem;
+}
+
+.link-login {
+  background: #FFFFFF;
+  border: 1rem solid #346170;
+  border-radius: 4rem;
+  font-size: 13rem;
+}
+
+.container-main{
+
+  &-work{
+    background: url("../img/Rectangle.png") no-repeat;
+    background-size: 100% 100%;
+    padding: 210rem 0 312rem 144rem;
+
+    h1{
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 76rem;
+      line-height: 78rem;
+      letter-spacing: 2rem;
+      color: $colorBlue;
+      margin-bottom: 31rem;
+    }
+    p{
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24rem;
+      line-height: 32rem;
+      letter-spacing: 0.5rem;
+      color: $colorBlue;
+      margin-bottom: 25rem;
+      max-width: 491rem;
+    }
+  }
+
+  &-sponsor{
+
+    background: $colorBlue;
+    padding: 80rem 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 100;
+
+    h2{
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 25rem;
+      line-height: 38rem;
+      text-align: center;
+      letter-spacing: 0.7rem;
+      color: $colorWhite;
+      margin-bottom: 24rem;
+    }
+
+    div{
+      display: flex;
+      align-items: center;
+      img{
+        width: 95rem;
+        height: auto;
+        object-fit: contain;
+        margin: 0 16rem;
+
+        &:first-child{
+          margin: 0 16rem 0 0;
+        }
+
+        &:last-child{
+          margin: 0 0 0 16rem;
+        }
+      }
+    }
+
+  }
+
+  &-preview_contract{
+
+    background: $colorBlue;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 144rem;
+    padding-bottom: 32rem;
+    position: relative;
+    z-index: 99;
+
+    .title-preview_contracts{
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 72rem;
+      line-height: 72rem;
+      letter-spacing: 0.4rem;
+      color: #F2DCE4;
+      max-width: 330rem;
+      margin-bottom: 38rem;
+    }
+
+    .description{
+      font-style: normal;
+      font-weight: 400;
+      font-size: 21rem;
+      line-height: 28rem;
+      color: #FFFFFF;
+      margin-bottom: 20rem;
+      max-width: 500rem;
+    }
+
+    img{
+      position: absolute;
+      right: 157rem;
+      top: -97rem;
+      width: 500rem;
+      height: 600rem;
+    }
+  }
+
+  &-preview_collaborate{
+    background: $colorBlue;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 128rem 144rem;
+    position: relative;
+
+    .container-collaborate{
+      width: 100%;
+      height: auto;
+      background: $colorExtraLightBlue;
+      background-image: url("../img/pingpong.png");
+      background-position: 100% 110%;
+      background-repeat: no-repeat;
+      border-radius: 8rem;
+      background-size: 420rem 420rem;
+
+      header{
+        width: 100%;
+        border-bottom: 1rem solid #94B4C2;
+
+        ul{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          li{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 32rem 0 34rem;
+            width: calc(100% / 6);
+            border-bottom: 2px solid transparent;
+
+            img{
+              width: 24rem;
+              height: 24rem;
+              margin-bottom: 7rem;
+            }
+            a{
+              font-weight: 400;
+              font-size: 17rem;
+              line-height: 24rem;
+              text-align: center;
+              color: $colorBlue;
+            }
+
+            &:hover{
+              border-bottom: 2px solid $colorBlue;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      h3{
+        font-weight: 700;
+        font-size: 55rem;
+        line-height: 80rem;
+        letter-spacing: 0.7rem;
+        color: $colorBlue;
+        margin-top: 37rem;
+        margin-left: 96rem;
+      }
+      p{
+        margin-top: 11rem;
+        margin-left: 96rem;
+        font-size: 21rem;
+        line-height: 28rem;
+        color: #013A4C;
+        max-width: 50%;
+      }
+      .list-collaborate-check{
+        margin-top: 56rem;
+        margin-left: 96rem;
+        li{
+          a{
+            font-weight: 400;
+            font-size: 14rem;
+            line-height: 20rem;
+            color: $colorBlue;
+            margin-left: 28rem;
+            position: relative;
+
+            &:before{
+              content: "\2713";
+              width: 20rem;
+              height: 20rem;
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              margin: auto;
+              left: -28rem;
+              border-radius: 50%;
+              background: #346170;
+              color: $colorWhite;
+              text-align: center;
+            }
+          }
+
+          &:nth-child(2), &:nth-child(3){
+            margin-top: 8rem;
+          }
+        }
+      }
+      .container-button-collaborate{
+        margin: 44rem 0 78rem 96rem;
+        width: fit-content;
+      }
+    }
+  }
+
+}
+
+main{
+  max-width: 100%;
+}

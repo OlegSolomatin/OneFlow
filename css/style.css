@@ -68,6 +68,21 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
   margin: 0 auto;
 }
 
+/*
+Миксин создания кнопок
+1: значение указываем сколько элементов в блоке
+2: значение указываем заливку первой нопки
+3: значение указываем паддинги для первой кнопки Small или Medium
+4: значение указываем размер шрифтра для первой кнопки
+5: значение указываем цвет текста в кнопки
+6: значение указываем цвет заливки для второго элемента если же элемент отсутствует пишем false
+7: значение указываем паддинги для второго элемента Small или Medium если же элемент отсутствует пишем false
+8: значение указываем размер шрифта для второго элемента если же элемент отсутствует пишем false
+9: значение указываем цвет текста для второго элемента если же элемент отсутствует пишем false
+10: значение указываем цвет границ элемента
+11: значение указываем цвет границ второго элементра если же элемент отсутствует пишем false
+12: указываем наличие скругления углов у элементов $br: true или false;
+*/
 .container-button .container-button-items {
   display: flex;
 }
@@ -101,6 +116,9 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
   box-shadow: 0rem 5rem 10rem 2rem rgba(255, 255, 255, 0.2) inset;
 }
 
+.container-button-preview .container-button-items {
+  display: flex;
+}
 .container-button-preview li:first-child {
   background: #FFD063;
   font-size: 16rem;
@@ -120,6 +138,9 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
   box-shadow: 0rem 5rem 10rem 2rem rgba(255, 255, 255, 0.2) inset;
 }
 
+.container-button-collaborate .container-button-items {
+  display: flex;
+}
 .container-button-collaborate li:first-child {
   background: transparent;
   font-size: 14rem;
@@ -134,6 +155,28 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
   display: flex;
 }
 .container-button-collaborate li:hover {
+  -webkit-box-shadow: 0rem 5rem 10rem 2rem rgba(255, 255, 255, 0.2) inset;
+  -moz-box-shadow: 0rem 5rem 10rem 2rem rgba(255, 255, 255, 0.2) inset;
+  box-shadow: 0rem 5rem 10rem 2rem rgba(255, 255, 255, 0.2) inset;
+}
+
+.container-button-details .container-button-items {
+  display: flex;
+}
+.container-button-details li:first-child {
+  background: #013A4C;
+  font-size: 14rem;
+  color: #ffffff;
+  border: 1rem solid #013A4C;
+  border-radius: 4rem;
+}
+.container-button-details li:first-child a {
+  padding: 11rem 17rem;
+}
+.container-button-details a {
+  display: flex;
+}
+.container-button-details li:hover {
   -webkit-box-shadow: 0rem 5rem 10rem 2rem rgba(255, 255, 255, 0.2) inset;
   -moz-box-shadow: 0rem 5rem 10rem 2rem rgba(255, 255, 255, 0.2) inset;
   box-shadow: 0rem 5rem 10rem 2rem rgba(255, 255, 255, 0.2) inset;
@@ -399,6 +442,72 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
 .container-main-press_play img {
   width: 100%;
   height: 814rem;
+}
+.container-main-product_description {
+  background: url("../img/rainbow_hands_bg.png") no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 122rem 144rem 619rem;
+  position: relative;
+}
+.container-main-product_description h3 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 80rem;
+  line-height: 80rem;
+  text-align: center;
+  letter-spacing: 0.7rem;
+  color: #013A4C;
+  margin-bottom: 153rem;
+  width: 75%;
+}
+.container-main-product_description .details-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 45%;
+  margin-bottom: 126rem;
+}
+.container-main-product_description .details-description .container-details-icon {
+  width: 109rem;
+  height: 109rem;
+  border-radius: 50%;
+  background: #013A4C;
+  margin-bottom: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-main-product_description .details-description img {
+  width: 50rem;
+  height: 50rem;
+}
+.container-main-product_description .details-description h4 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48rem;
+  line-height: 54rem;
+  letter-spacing: 0.4rem;
+  color: #013A4C;
+  margin-bottom: 34rem;
+}
+.container-main-product_description .details-description p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18rem;
+  line-height: 24rem;
+  color: #013A4C;
+  margin-bottom: 17rem;
+}
+.container-main-product_description .details-description:nth-child(even) {
+  align-self: flex-end;
+}
+.container-main-product_description .details-description:nth-child(odd) {
+  align-self: flex-start;
 }
 
 main {

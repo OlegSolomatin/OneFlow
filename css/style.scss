@@ -92,10 +92,6 @@ $fontSizeBase: 14;
 
 html{
   font-size: 0.0700384vw;
-  /*font-size: calc(100vw - (99% - ((100vw / 100) * 99)));*/
-  /*font-size: calc(baseKef(14) * 0vw);*/
-  /*font-size: calc(100vw * sizeEl(14) / 100);*/
-  /*font-size: allSize(16, $widthBase, $fontSizeBase)+vw;*/
   font-family: 'Work Sans', sans-serif;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -439,6 +435,12 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
     }
   }
 
+  &-press_play{
+    img{
+      width: 100%;
+      height: 814rem;
+    }
+  }
 }
 
 main{

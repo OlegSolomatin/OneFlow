@@ -164,7 +164,10 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
 
 .container-button-details{
   @include containerButton(1, $colorBlue, small, 14rem, $colorWhite, false, false, false, false, $colorBlue, false, $br: true)
+}
 
+.container-button-description{
+  @include containerButton(1, $colorYellow, small, 14rem, $colorBlue, false, false, false, false, $colorYellow, false, $br: true)
 }
 
 .container-header{
@@ -531,6 +534,31 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
       &:nth-child(odd){
         align-self: flex-start;
       }
+    }
+  }
+
+  &-description{
+    background: url("../img/belive_bg.png") no-repeat;
+    background-size: cover;
+    padding: 295rem 144rem 317rem;
+    h3{
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 73rem;
+      line-height: 78rem;
+      letter-spacing: 2rem;
+      color: $colorLightPink;
+      margin-bottom: 31rem
+    }
+    p{
+      font-weight: 400;
+      font-size: 26rem;
+      line-height: 32rem;
+      letter-spacing: 0.5rem;
+      margin-bottom: 25rem;
+      color: $colorWhite;
+      width: 42%;
     }
   }
 }

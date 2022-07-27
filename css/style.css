@@ -204,6 +204,28 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
   box-shadow: 0rem 5rem 10rem 2rem rgba(255, 255, 255, 0.2) inset;
 }
 
+.container-button-integration .container-button-items {
+  display: flex;
+}
+.container-button-integration li:first-child {
+  background: #FFD063;
+  font-size: 15rem;
+  color: #013A4C;
+  border: 1rem solid #FFD063;
+  border-radius: 4rem;
+}
+.container-button-integration li:first-child a {
+  padding: 15rem 21rem;
+}
+.container-button-integration a {
+  display: flex;
+}
+.container-button-integration li:hover {
+  -webkit-box-shadow: 0rem 5rem 10rem 2rem rgba(255, 255, 255, 0.2) inset;
+  -moz-box-shadow: 0rem 5rem 10rem 2rem rgba(255, 255, 255, 0.2) inset;
+  box-shadow: 0rem 5rem 10rem 2rem rgba(255, 255, 255, 0.2) inset;
+}
+
 .container-header {
   height: 80rem;
   background: #fff;
@@ -573,6 +595,7 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
   flex-wrap: nowrap;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  padding-right: 114rem;
 }
 .container-main-reviews .container-wrapper-reviews-row::-webkit-scrollbar {
   display: none;
@@ -621,6 +644,39 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
   font-size: 14rem;
   line-height: 20rem;
   color: #013A4C;
+}
+.container-main-integration {
+  display: flex;
+  align-items: center;
+  padding: 0 182rem 122rem;
+}
+.container-main-integration .container-wrapper-integration-text {
+  width: calc(50% - 112rem);
+  margin-right: 112rem;
+}
+.container-main-integration .container-wrapper-integration-text .title-integration {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 72rem;
+  line-height: 72rem;
+  letter-spacing: 0.4rem;
+  color: #013A4C;
+  margin-bottom: 30rem;
+}
+.container-main-integration .container-wrapper-integration-text .subtitle-integration {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21rem;
+  line-height: 28rem;
+  color: #013A4C;
+  margin-bottom: 18rem;
+}
+.container-main-integration .container-wrapper-integration-img {
+  width: 50%;
+}
+.container-main-integration .container-wrapper-integration-img img {
+  width: 100%;
 }
 
 main {

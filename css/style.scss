@@ -170,6 +170,10 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
   @include containerButton(1, $colorYellow, small, 14rem, $colorBlue, false, false, false, false, $colorYellow, false, $br: true)
 }
 
+.container-button-integration{
+  @include containerButton(1, $colorYellow, medium, 15rem, $colorBlue, false, false, false, false, $colorYellow, false, $br: true)
+}
+
 .container-header{
   height: 80rem;
   background: #fff;
@@ -580,6 +584,7 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
       flex-wrap: nowrap;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
+      padding-right: 114rem;
       &::-webkit-scrollbar {
         display: none;
       }
@@ -635,6 +640,43 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
       font-size: 14rem;
       line-height: 20rem;
       color: $colorBlue;
+    }
+  }
+
+  &-integration{
+    display: flex;
+    align-items: center;
+    padding: 0 182rem 122rem;
+
+    .container-wrapper-integration-text{
+      width: calc(50% - 112rem);
+      margin-right: 112rem;
+      .title-integration{
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 72rem;
+        line-height: 72rem;
+        letter-spacing: 0.4rem;
+        color: $colorBlue;
+        margin-bottom: 30rem;
+      }
+
+      .subtitle-integration{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 21rem;
+        line-height: 28rem;
+        color: $colorBlue;
+        margin-bottom: 18rem
+      }
+    }
+
+    .container-wrapper-integration-img{
+      width: 50%;
+      img{
+        width: 100%;
+      }
     }
   }
 }

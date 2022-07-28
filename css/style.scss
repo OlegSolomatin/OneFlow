@@ -179,8 +179,17 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
 .container-button-post{
   @include containerButton(1, $colorYellow, medium, 16rem, $colorBlue, false, false, false, false, $colorYellow, false, $br: true)
 }
+
 .container-button-full-post{
   @include  containerButton(1, transparent, small, 14rem, $colorWhite, false, false, false, false, $colorWhite, false, $br: true)
+}
+
+.container-button-more-item{
+  @include containerButton(1, $colorYellow, medium, 16rem, $colorBlue, false, false, false, false, $colorYellow, false, $br: true)
+}
+
+.container-button-footer{
+  @include containerButton(1, $colorYellow, medium, 16rem, $colorBlue, false, false, false, false, $colorYellow, false, $br: true)
 }
 
 .container-header{
@@ -188,6 +197,9 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
   background: #fff;
   padding:4rem 48rem 0 48rem;
   border-bottom: 1rem solid gainsboro;
+  position: fixed;
+  top: 0;
+  z-index: 101;
 
   header{
     max-width: 100%;
@@ -245,6 +257,8 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
 }
 
 .container-main{
+
+  margin-top: 80rem;
 
   &-work{
     background: url("../img/Rectangle.png") no-repeat;
@@ -641,6 +655,10 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
     .avatar-author-reviews{
       margin-right: 16rem;
       margin-top: 6rem;
+      img{
+        width: 48rem;
+        height: 48rem;
+      }
     }
 
 
@@ -695,6 +713,7 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
     align-items: center;
     justify-content: center;
     padding: 0 144rem;
+    margin-bottom: 303rem;
     width: 100%;
 
     .container-inner-blog-header{
@@ -856,8 +875,175 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
       }
     }
   }
+
+  &-more{
+
+    padding: 0 144rem;
+    margin-bottom: 144rem;
+
+    .title-more{
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 48rem;
+      line-height: 54rem;
+      letter-spacing: 0.4rem;
+      color: $colorBlue;
+      margin-bottom: 49rem;
+    }
+
+    .container-wrapper-more-items{
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .container-inner-more-item{
+      width: calc(50% - 16rem);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      &:nth-child(odd){
+        margin-right: 16rem;
+      }
+      &:nth-child(even){
+        margin-left: 16rem;
+      }
+
+      img{
+        width: 100%;
+        height: 315rem;
+        border-radius: 8rem;
+      }
+    }
+
+    .subtitle-more-item{
+      font-size: 16rem;
+      line-height: 20rem;
+      text-align: center;
+      color: $colorBlue;
+      margin: 18rem 0;
+    }
+    .title-more-item{
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 31rem;
+      line-height: 40rem;
+      letter-spacing: 0.4rem;
+      color: $colorBlue;
+      margin-bottom: 22rem;
+      text-align: center;
+      padding: 0 33rem;
+    }
+
+  }
 }
 
 main{
   max-width: 100%;
+}
+
+footer{
+  padding: 64rem 144rem 73rem;
+  background: $colorBlue;
+
+  .header{
+    border-bottom: 1rem solid $colorLightBlue;
+    padding-bottom: 71rem;
+    display: flex;
+    justify-content: space-between;
+
+    .container-text-company-info{
+      img{
+        width: 140rem;
+        height: 31rem;
+        margin-bottom: 67rem;
+      }
+      .title-location, .text-location, .link-phoneNumber{
+        font-size: 14rem;
+        line-height: 20rem;
+        color: $colorWhite;
+      }
+    }
+
+    .container-nav-link{
+      .nav-link-list{
+        display: flex;
+        flex-direction: column;
+
+        &-items{
+          font-size: 16rem;
+          line-height: 20rem;
+          color: #99B0B7;
+          margin-bottom: 13rem;
+        }
+
+        &-items:first-child{
+          color: $colorWhite;
+        }
+
+      }
+
+      &:last-child{
+        .nav-link-list{
+          .nav-link-list-items {
+            font-size: 16rem;
+            line-height: 20rem;
+            color: $colorWhite;
+            margin-bottom: 13rem;
+          }
+        }
+      }
+    }
+  }
+
+  .main{
+    border-bottom: 1rem solid $colorLightBlue;
+    padding:48rem 0 76rem;
+    display: flex;
+    flex-direction: column;
+
+    .title-footer-main{
+      font-family: 'Roboto',sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 23rem;
+      line-height: 32rem;
+      letter-spacing: 0.4rem;
+      color: $colorWhite;
+      margin-bottom: 11rem;
+    }
+    .container-content-oneflow{
+      display: flex;
+      align-items: center;
+      .text-content{
+        font-size: 14rem;
+        line-height: 20rem;
+        color: $colorWhite;
+        margin-right: 49rem;
+        width: 33%;
+      }
+    }
+  }
+
+  .footer{
+    margin-top: 17rem;
+    display: flex;
+    align-items: center;
+    .container-nav-list{
+      .nav-link-list{
+        display: flex;
+        &-items{
+          font-size: 13rem;
+          line-height: 18rem;
+          color: #99B0B7;
+          margin-right: 32rem;
+        }
+      }
+    }
+    img{
+      width: 20rem;
+      height: 20rem;
+    }
+  }
 }
